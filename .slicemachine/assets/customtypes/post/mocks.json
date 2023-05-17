@@ -1,0 +1,22 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "yes"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "wait",
+    "type": "Text"
+  },
+  "content": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Culpa qui Lorem aliqua excepteur elit. Sunt dolor ut veniam cupidatat tempor adipisicing voluptate fugiat Lorem et culpa mollit veniam excepteur in. In incididunt in cupidatat esse sunt aliquip sint in consectetur elit sunt duis."
+        }
+      }
+    ]
+  }
+}
