@@ -1,4 +1,3 @@
-// import SEO from '@/src/components/SEO';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import styles from './Posts.module.scss';
