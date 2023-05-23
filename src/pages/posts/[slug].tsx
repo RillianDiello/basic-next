@@ -58,8 +58,6 @@ export const getStaticProps: GetStaticProps = async context => {
   const client = createClient({});
   const response = await client.getByUID('post', String(slug), {});
 
-  console.log(RichText.asText(response.data.content));
-
   const post = {
     slug,
     title: response.data.title,

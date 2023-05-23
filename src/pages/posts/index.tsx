@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async previewData => {
   const response = await client.getAllByType('post', {
     fetch: ['post.title', 'post.content'],
   });
-  // response.map(item => console.log(item));
 
   const posts = response.map(post => {
     return {
