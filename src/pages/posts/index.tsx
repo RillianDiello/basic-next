@@ -13,7 +13,7 @@ export interface Post {
   slug: string;
   title: string;
   excerpt: string;
-  updateAt: string;
+  updatedAt: string;
 }
 
 export interface PostsProps {
@@ -28,7 +28,7 @@ export default function Posts({ posts }: PostsProps) {
           {posts.map(post => (
             <Link href={`/posts/${post.slug}`} key={post.slug} legacyBehavior>
               <a>
-                <time>{post.updateAt}</time>
+                <time>{post.updatedAt}</time>
                 <strong>{post.title}</strong>
                 <p>{post.excerpt}</p>
               </a>

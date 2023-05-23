@@ -4,6 +4,8 @@ import SEO from '../../components/SEO';
 import styles from './Post.module.scss';
 import { createClient } from '@/src/services/prismic';
 import { RichText } from 'prismic-dom';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export interface PostProps {
   post: {
@@ -61,14 +63,11 @@ export const getStaticProps: GetStaticProps = async context => {
   const post = {
     slug,
     title: response.data.title,
-    content: RichText.asText(response.data.content),
-    updatedAt: new Date(response.last_publication_date).toLocaleDateString(
-      'pt-BR',
-      {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric',
-      },
+    content: RichText.asHtml(response.data.content),
+    updatedAt: format(
+      new Date(response.last_publication_date),
+      "d 'de' MMMM 'de' yyyy",
+      { locale: ptBR },
     ),
   };
 
