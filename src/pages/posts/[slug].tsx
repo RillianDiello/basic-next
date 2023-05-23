@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import SEO from '../../components/SEO';
-import styles from './post.module.scss';
+import styles from './Post.module.scss';
 import { createClient } from '@/src/services/prismic';
 import { RichText } from 'prismic-dom';
 
