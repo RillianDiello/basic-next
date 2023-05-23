@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
 import styles from '../styles/Home.module.scss';
+import Image from 'next/image';
 
 /**
  * Paginas Criadas no lado do servidor
@@ -24,7 +25,7 @@ export default function Home() {
             Um blog com conteudos de <span>Desenvolvimento</span>
           </p>
         </section>
-        <img src="/home.svg" alt="Home Image" />
+        <Image src="/home.svg" alt="Home Image" width={360} height={360} />
       </main>
     </>
   );
