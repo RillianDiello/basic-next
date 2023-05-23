@@ -1,8 +1,9 @@
-import SEO from '@/src/components/SEO';
+// import SEO from '@/src/components/SEO';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import styles from './Posts.module.scss';
 import { createClient } from '@/src/services/prismic';
+import SEO from '../../components/SEO';
 
 /**
  * Paginas Staticas:
