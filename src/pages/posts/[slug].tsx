@@ -47,7 +47,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const { slug } = context.params;
+  const { slug } = context.params ?? {};
+
+  if (!slug) {
+    return {
+      props: {},
+      revalidate: 60 * 60 * 12, // 12 horas
+    };
+  }
   const client = createClient({});
   const response = await client.getByUID('post', String(slug), {});
 
