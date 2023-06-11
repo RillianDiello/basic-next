@@ -1,4 +1,4 @@
-import { getByAltText, render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Posts, { getStaticProps } from '../../pages/posts/index';
 import { mocked } from 'ts-jest/utils';
 import { createClient } from '../../services/prismic';
@@ -8,7 +8,7 @@ const posts = [
     slug: 'test-new-post',
     title: 'Title for new post',
     excerpt: 'Post excerpt',
-    updateAt: '15 de maio 2023',
+    updatedAt: '15 de maio 2023',
   },
 ];
 jest.mock('../../services/createClient');
